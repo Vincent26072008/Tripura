@@ -18,7 +18,7 @@ export async function GET(request: Request) {
   const loginToken = loginTokenRepo.findByToken(token)
 
   if (!loginToken) {
-    return NextResponse.redirect(new URL('/login?error=link_invalid', url.origin))
+    return NextResponse.redirect(new URL('/logining?error=link_invalid', url.origin))
   }
 
   const now = new Date()
